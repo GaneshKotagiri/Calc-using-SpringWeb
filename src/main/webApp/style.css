@@ -1,0 +1,104 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* General styling for the body */
+body {
+    font-family: 'Open Sans', sans-serif; /* Use Google Font 'Open Sans' */
+    background-color: #f0f0f0; /* Light grey background for better contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling for the container */
+.container {
+    background-color: #eae0e0; /* White background */
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(147, 47, 47, 0.2); /* Shadow with black tint */
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Styling for headings */
+h1 {
+    color: #333333; /* Dark grey for headings */
+    font-size: 28px;
+    font-weight: 700; /* Bold font weight */
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* Styling for form labels and inputs */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600; /* Semi-bold font weight */
+    color: #555555; /* Medium grey for labels */
+    text-align: left;
+}
+
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc; /* Light grey border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9; /* Very light grey background */
+    color: #333333; /* Dark grey text */
+}
+
+/* Styling for the button group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+button[type="submit"] {
+    background-color: #333333; /* Dark grey background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600; /* Semi-bold font weight */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+    margin-bottom: 10px;
+    flex-grow: 1;
+    margin: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #000000; /* Black background on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Styling for the error message */
+.error {
+    color: #72071d; /* Red for error messages */
+    font-weight: bold;
+}
+
+/* Styling for the back link */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #333333; /* Dark grey for links */
+    text-decoration: none;
+    font-weight: 600; /* Semi-bold font weight */
+}
+
+a:hover {
+    text-decoration: underline;
+}
