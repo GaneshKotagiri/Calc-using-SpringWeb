@@ -20,7 +20,7 @@ public class HomeController {
         int result=num1+num2;
         System.out.println(result);
         session.setAttribute("result",result);
-        return "result.jsp";
+        return "result";
     }
     @RequestMapping("/sub")
     public String sub(HttpServletRequest req, HttpSession session) throws Exception{
@@ -29,16 +29,16 @@ public class HomeController {
         int result=num1-num2;
         System.out.println(result);
         session.setAttribute("result",result);
-        return "result.jsp";
+        return "result";
     }
     //we are using HttpServletRequest-req and HttpSession-session to getting the parameters and storing in them and session to store the result which will be viewed in the redirected page
     //we can also use other methods to get the attributes and store them
     @RequestMapping( "/calc")
     public String calc(HttpServletRequest req,HttpSession session){
-        int num1= Integer.parseInt(req.getParameter("num1"));
-        int num2= Integer.parseInt(req.getParameter("num2"));
+        long num1= Long.parseLong(req.getParameter("num1"));
+        long num2= Long.parseLong(req.getParameter("num2"));
         String operation=req.getParameter("operation");
-        int result=0;
+        long result=0;
         if("add".equals(operation)){
             result=num1+num2;
         }else if("sub".equals(operation)){
@@ -50,7 +50,7 @@ public class HomeController {
         }
         System.out.println(result);
         session.setAttribute("result",result);
-        return "result.jsp";
+        return "result";
     }
     // In this instead of using HttpServletRequest and Session we have used int variables
     //to store the data and Model object to view the result int the servlet page
