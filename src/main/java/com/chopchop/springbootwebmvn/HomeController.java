@@ -73,6 +73,7 @@ public class HomeController {
 //        }
 //        System.out.println(result);
 //        mv.addObject("result",result);
+//        mv.setViewName(result);
 //        return "result.jsp";
 //    }
-}
+//}
