@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
@@ -54,8 +55,11 @@ public class HomeController {
     }
     // In this instead of using HttpServletRequest and Session we have used int variables
     //to store the data and Model object to view the result int the servlet page
+    //we can also use ModelAndView instead of Model and the methods will change from addAttributes to addObject
+
+
 //    @RequestMapping( "/calc")
-//    public String calc(int num1, int num2,int operation, Model model){
+//    public String calc(int num1, int num2,int operation, ModelAndView mv){
 //
 //        int result=0;
 //        if("add".equals(operation)){
@@ -68,7 +72,7 @@ public class HomeController {
 //            result=num1/num2;
 //        }
 //        System.out.println(result);
-//        model.addAttribute("result",result);
+//        mv.addObject("result",result);
 //        return "result.jsp";
 //    }
 }
